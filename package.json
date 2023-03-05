@@ -1,0 +1,14 @@
+{
+  "name": "structure-stream",
+  "version": "1.0.0",
+  "description": "Structure Stream API is a set of tool for processing JavaScript data structures.",
+  "main": "streamer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript", "data", "array", "object", "helper"
+  ],
+  "author": "Erlangga Riansyah",
+  "license": "MIT"
+}
