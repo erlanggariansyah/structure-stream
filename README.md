@@ -15,3 +15,27 @@ You can install StructureStreamJS using npm:
 ```javascript
 npm install structure-stream
 ```
+## Usage
+To use StructureStreamJS, simply require the package in your JavaScript file:
+
+```javascript
+const stream = require("streamer-js");
+```
+
+Or you can directly use it with static method of ArrayStreamer & ObjectStreamer class:
+
+### Array Stream
+```javascript
+const ArrayStreamer = require("structure-stream/src/class/ArrayStreamer");
+
+let exampleArray = [1, 2, 3];
+ArrayStreamer.of(exampleArray);
+```
+
+### Object Stream
+```javascript
+const ObjectStreamer = require("structure-stream/src/class/ObjectStreamer");
+
+let exampleArray = { name: "Linda", surname: "Dian" };
+ObjectStreamer.of(exampleArray);
+```
