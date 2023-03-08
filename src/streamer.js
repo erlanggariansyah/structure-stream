@@ -1,9 +1,16 @@
-const StructureStreamer = require("./class/StructureStreamer")
+const ArrayStreamer = require("./class/ArrayStreamer");
+const ObjectStreamer = require("./class/ObjectStreamer");
 
-function stream(data) {
-    if (data === null) throw new Error("data is null.");
-
-    return new StructureStreamer(data);
+function structureStream(data) {
+    if (data === null) {
+        throw Error("data is null.");
+    } else if (Array.isArray(data)) {
+        return new ArrayStreamer(data);
+    } else if (typeof data !== "object") {
+        return new ObjectStreamer(data);
+    } else {
+        throw Error("data is must an array or object.");
+    }
 }
 
-module.exports = stream;
+module.exports = structureStream;
