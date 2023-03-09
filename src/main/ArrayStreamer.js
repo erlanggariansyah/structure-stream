@@ -51,6 +51,22 @@ class ArrayStreamer {
         return new ArrayStreamer(this.array.sort((a, b) => b - a));
     }
 
+    merge(...arrays) {
+        return new ArrayStreamer(this.array.concat(...arrays));
+    }
+
+    distinct() {
+        return new ArrayStreamer([...new Set(this.array)]);
+    }
+
+    get(index) {
+        return this.array[index];
+    }
+
+    size() {
+        return this.array.length;
+    }
+
     toObject() {
         return this.array.reduce((acc, item) => ({ ...acc, ...item }), {});
     }
