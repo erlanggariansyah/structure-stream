@@ -27,6 +27,30 @@ class ArrayStreamer {
         return this.array.reduce(reducer, initialValue);
     }
 
+    sum() {
+        return this.array.reduce((acc, curr) => acc + curr, 0);
+    }
+
+    max() {
+        return Math.max(...this.array);
+    }
+
+    min() {
+        return Math.min(...this.array);
+    }
+
+    average() {
+        return this.array.reduce((acc, cur) => acc + cur, 0) / this.array.length;
+    }
+
+    sortAsc() {
+        return new ArrayStreamer(this.array.sort((a, b) => a - b));
+    }
+
+    sortDesc() {
+        return new ArrayStreamer(this.array.sort((a, b) => b - a));
+    }
+
     toObject() {
         return this.array.reduce((acc, item) => ({ ...acc, ...item }), {});
     }
