@@ -61,3 +61,5 @@ class LinkedHashMap {
         }
     }
 }
+
+module.exports = LinkedHashMap;
