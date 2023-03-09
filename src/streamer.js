@@ -6,7 +6,7 @@ function structureStream(data) {
         throw Error("data is null.");
     } else if (Array.isArray(data)) {
         return new ArrayStreamer(data);
-    } else if (typeof data !== "object") {
+    } else if (typeof data === "object") {
         return new ObjectStreamer(data);
     } else {
         throw Error("data is must an array or object.");
