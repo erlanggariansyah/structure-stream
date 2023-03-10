@@ -26,7 +26,7 @@ Or you can directly use it with static method of ArrayStreamer & ObjectStreamer 
 
 ### Array Stream
 ```javascript
-const ArrayStreamer = require("structure-stream/src/class/ArrayStreamer");
+const ArrayStreamer = require("structure-stream/src/main/ArrayStreamer");
 
 let exampleArray = [1, 2, 3];
 ArrayStreamer.of(exampleArray);
@@ -34,7 +34,7 @@ ArrayStreamer.of(exampleArray);
 
 ### Object Stream
 ```javascript
-const ObjectStreamer = require("structure-stream/src/class/ObjectStreamer");
+const ObjectStreamer = require("structure-stream/src/main/ObjectStreamer");
 
 let exampleArray = { name: "Linda", surname: "Dian" };
 ObjectStreamer.of(exampleArray);
