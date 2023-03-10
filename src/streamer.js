@@ -1,5 +1,5 @@
-const ArrayStreamer = require("./class/ArrayStreamer");
-const ObjectStreamer = require("./class/ObjectStreamer");
+const ArrayStreamer = require("./main/ArrayStreamer");
+const ObjectStreamer = require("./main/ObjectStreamer");
 
 function structureStream(data) {
     if (data === null) {
