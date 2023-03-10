@@ -66,6 +66,35 @@ console.log(result2); // [2, 4]
 const result3 = myStream
     .reduce((acc, item) => acc + item, 0);
 console.log(result3); // 15
+
+const resultSum = myStream
+    .sum();
+console.log(resultSum); // 15
+
+// Find max value of all items
+const resultMax = myStream
+    .max();
+console.log(resultMax) // 5
+
+// Find min value of all items
+const resultMin = myStream
+    .min();
+console.log(resultMin) // 1
+
+// Find average value of all items
+const resultAvg = myStream
+    .average();
+console.log(resultAvg) // 3
+
+// Sort all item by ascending
+const resultSortAsc = myStream
+    .sortAsc();
+console.log(resultSortAsc) // [1, 2, 3, 4, 5]
+
+// Sort all item by descending
+const resultSortDesc = myStream
+    .sortDesc();
+console.log(resultSortDesc) // [5, 4, 3, 2, 1]
 ```
 
 ### Chaining stream operators
