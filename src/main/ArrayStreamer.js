@@ -59,6 +59,20 @@ class ArrayStreamer {
         return new ArrayStreamer([...new Set(this.array)]);
     }
 
+    group() {
+        return this.array.reduce((acc, curr) => {
+            const lastGroup = acc[acc.length - 1];
+    
+            if (!lastGroup || lastGroup[0] !== curr) {
+              acc.push([curr]);
+            } else {
+              lastGroup.push(curr);
+            }
+          
+            return acc;
+          }, []).flatMap((group) => group);
+    }
+
     get(index) {
         return this.array[index];
     }
